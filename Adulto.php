@@ -14,7 +14,7 @@
       <h2>Quantos convidados</h2>
       <div class="form-check">
         <label for="casamento">Quantos convidados?</label>
-        <input type="number" nome="qtdConvidados" id="adulto" />
+        <input type="number" name="qtdConvidados" id="adulto" />
       </div>
 
       <h2>O que será servido?</h2>

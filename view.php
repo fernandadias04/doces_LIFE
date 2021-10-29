@@ -11,9 +11,12 @@ if (!$id || !isset($_SESSION[$id])) {
 }
 
 $data = $_SESSION[$id];
-$name = $data['doces'] ?? null;
+$doces = $data['doces'] ?? null;
 
 unset($_SESSION[$id]);
+
 ?>
+
+
 
 <p>O nome digitado foi <?php echo $doces; ?></p>

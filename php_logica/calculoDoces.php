@@ -40,8 +40,8 @@ class CalculoDoces
     protected $bebidas;
     protected $refeicao;
 
-    public function __construct( $qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $refeicao)
-    {  
+    public function __construct($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $refeicao)
+    {
         $this->qtdConvidados = $qtdConvidados;
         $this->duracaoEvento = $duracaoEvento;
         $this->outrosDoces = $outrosDoces;
@@ -53,19 +53,19 @@ class CalculoDoces
 
     public function comidaServida($refeicao, $const1 = 0, $const2 = 0, $const3 = 0, $const4 = 0)
     {
-        if ($refeicao = 'Almoço') {
+        if ($refeicao == 'option1') {
             $doces = $const1;
         }
 
-        if ($refeicao = 'Jantar') {
+        if ($refeicao == 'option2') {
             $doces = $const2;
         }
 
-        if ($refeicao = 'Finger Food') {
+        if ($refeicao == 'option3') {
             $doces = $const3;
         }
 
-        if ($refeicao = 'Café') {
+        if ($refeicao == 'option4') {
             $doces = $const4;
         }
 
@@ -76,15 +76,15 @@ class CalculoDoces
 
     public function duracaoEventoCasamentoFesta15($duracaoEvento, $const1 = 0, $const2 = 0, $const3 = 0)
     {
-        if ($duracaoEvento <= 6) {
+        if ($duracaoEvento == 'option1') {
             $doces = $const1;
         }
 
-        if ($duracaoEvento > 6 && $duracaoEvento < 10) {
+        if ($duracaoEvento == 'option2') {
             $doces = $const2;
         }
 
-        if ($duracaoEvento >= 10) {
+        if ($duracaoEvento == 'option3') {
             $doces = $const3;
         }
 
@@ -93,15 +93,15 @@ class CalculoDoces
 
     public function duracaoEventoInfantilBatizado($duracaoEvento,  $const1 = 0, $const2 = 0, $const3 = 0)
     {
-        if ($duracaoEvento <= 3) {
+        if ($duracaoEvento == 'option1') {
             $doces = $const1;
         }
 
-        if ($duracaoEvento > 3 && $duracaoEvento < 5) {
+        if ($duracaoEvento == 'option2') {
             $doces = $const2;
         }
 
-        if ($duracaoEvento >= 5) {
+        if ($duracaoEvento == 'option3') {
             $doces = $const3;
         }
 
@@ -110,7 +110,7 @@ class CalculoDoces
 
     public function duracaoEventoAdulto($duracaoEvento, $const1 = 0, $const2 = 0)
     {
-        if ($duracaoEvento = true) {
+        if ($duracaoEvento == 'option1') {
             $doces = $const1;
         } else {
             $doces = $const2;
@@ -121,7 +121,7 @@ class CalculoDoces
 
     public function sobremesa($sobremesa, $const1 = 0, $const2 = 0)
     {
-        if ($sobremesa = true) {
+        if ($sobremesa == 'option1') {
             $doces = $const1;
         } else {
             $doces = $const2;
@@ -132,7 +132,7 @@ class CalculoDoces
 
     public function bebida($bebidas, $const1 = 0, $const2 = 0)
     {
-        if ($bebidas = true) {
+        if ($bebidas == 'option1') {
             $doces = $const1;
         } else {
             $doces = $const2;
@@ -141,54 +141,52 @@ class CalculoDoces
         return $doces;
     }
 
-    public function calculoCasamentoAni15($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $sabores, $refeicao, $idadeConvidados)
+    public function calculoCasamentoAni15()
     {
         $doces = 0;
 
-        $doces += $this->comidaServida($refeicao, static::ALMOCO_CASAMENTO15ANOS, static::JANTAR_CASAMENTO15ANOS, static::FINGER_CASAMENTO15ANOS);
-
-        $doces += $this->duracaoEventoCasamentoFesta15($duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
-
-        $doces += $this->sobremesa($outrosDoces, static::SOBREMESA_SIM_CASAMENTO15ANOS, static::SOBREMESA_NAO_CASAMENTO15ANOS);
-
-        $doces += $this->bebida($bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
-
-        $doces = $doces * $qtdConvidados;
-
-        return $doces;
-    }
-
-    public function caulculoNiverAdulto($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $sabores, $refeicao, $idadeConvidados)
-    {
-        $doces = 0;
-
-        $doces += $this->comidaServida($refeicao, static::ALMOCO_ANIVERSARIO_ADULTO, static::JANTAR_ANIVERSARIO_ADULTO, static::FINGER_ANIVERSARIO_ADULTO);
-        
-        $doces += $this->duracaoEventoCasamentoFesta15($duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
-
-        $doces += $this->bebida($bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
-
-        $doces = $doces * $qtdConvidados;
-
-        return $doces;
-    }
-
-    public function caulculoBatizado($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $sabores, $refeicao, $idadeConvidados)
-    {
-        $doces = 0; 
-
-        $doces+= $this->comidaServida($refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0 , 0, static::CAFE_INFANTIL_BATIZADO);
-
-        $doces+= $this->duracaoEventoInfantilBatizado($duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
-
-        $doces+= $this->sobremesa($outrosDoces, static::SOBREMESA_NAO_INFANTIL_BATIZADO, static::SOBREMESA_SIM_INFANTIL_BATIZADO);
-
-        $doces+= $this->bebida($bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
-
-        $doces = $doces * $qtdConvidados;
-
-        return $doces;
-    }
-
+        $doces += $this->comidaServida($this->refeicao, static::ALMOCO_CASAMENTO15ANOS, static::JANTAR_CASAMENTO15ANOS, static::FINGER_CASAMENTO15ANOS);
     
+        $doces += $this->duracaoEventoCasamentoFesta15($this->duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
+
+        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_CASAMENTO15ANOS, static::SOBREMESA_NAO_CASAMENTO15ANOS);
+
+        $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
+
+        $doces = $doces * $this->qtdConvidados;
+
+        return $doces;
+    }
+
+    public function calculoNiverAdulto()
+    {
+        $doces = 0;
+
+        $doces += $this->comidaServida($this->refeicao, static::ALMOCO_ANIVERSARIO_ADULTO, static::JANTAR_ANIVERSARIO_ADULTO, static::FINGER_ANIVERSARIO_ADULTO);
+
+        $doces += $this->duracaoEventoCasamentoFesta15($this->duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
+
+        $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
+
+        $doces = $doces * $this->qtdConvidados;
+
+        return $doces;
+    }
+
+    public function calculoBatizado()
+    {
+        $doces = 0;
+
+        $doces += $this->comidaServida($this->refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0, 0, static::CAFE_INFANTIL_BATIZADO);
+
+        $doces += $this->duracaoEventoInfantilBatizado($this->duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
+
+        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_NAO_INFANTIL_BATIZADO, static::SOBREMESA_SIM_INFANTIL_BATIZADO);
+
+        $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
+
+        $doces = $doces * $this->qtdConvidados;
+
+        return $doces;
+    }
 }

@@ -14,13 +14,13 @@
       <div class="decisive">
         
         <div class="double">
-        <a href="./Casamento.html">Casamento</a>
-        <a href="./Casamento.html">Evento Corporativo</a>
+        <a href="./Casamento.php">Casamento</a>
+        <a href="./Casamento.php">Evento Corporativo</a>
       </div>
       <div class="true">
-        <a href="./Casamento.html">Aniversário 15 anos</a>
-        <a href="./Adulto.html">Aniversario Infantil</a>
-        <a href="./Infantil.html">Aniversário Adulto</a>
+        <a href="./Casamento.php">Aniversário 15 anos</a>
+        <a href="./Adulto.php">Aniversario Infantil</a>
+        <a href="./Infantil.php">Aniversário Adulto</a>
       </div>
       </div>
     </div>
