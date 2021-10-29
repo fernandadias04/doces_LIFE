@@ -34,28 +34,19 @@ class CalculoDoces
     const SOBREMESA_SIM_INFANTIL_BATIZADO = -1;
     const BEBIDA_NAO_INFANTIL_BATIZADO = 2;
 
-
-
-    protected $tipoFesta;
     protected $qtdConvidados;
     protected $duracaoEvento;
     protected $outrosDoces;
     protected $bebidas;
-    protected $sabores;
     protected $refeicao;
-    protected $idadeConvidados;
 
-
-    public function __construct($tipoFesta, $qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $sabores, $refeicao, $idadeConvidados)
-    {
-        $this->tipoFesta = $tipoFesta;
+    public function __construct( $qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $refeicao)
+    {  
         $this->qtdConvidados = $qtdConvidados;
         $this->duracaoEvento = $duracaoEvento;
         $this->outrosDoces = $outrosDoces;
         $this->bebidas = $bebidas;
-        $this->sabores = $sabores;
         $this->refeicao = $refeicao;
-        $this->idadeConvidados = $idadeConvidados;
     }
 
 

@@ -11,7 +11,7 @@
 
     <h1>Calculadora de doces</h1>
 
-    <form action="calculoDoces.php">
+    <form action="php_logica/retorno_festa_batizado.php">
       <h2>Quantos convidados</h2>
       <div class="form-check">
         <label for="casamento">Quantos convidados?</label>

@@ -10,7 +10,7 @@
   <body>
     <h1>Calculadora de doces</h1>
 
-    <form action="calculoDoces.php">
+    <form action="php_logica/retorno_festa_casamento.php">
       <div class="form-check">
         <h2>Quantos convidados</h2>
         <label for="casamento">Quantos convidados?</label>
