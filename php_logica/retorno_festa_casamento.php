@@ -19,7 +19,7 @@ $_SESSION[$id] = [
     'doces' => $doces
 ];
 
-header('Location: ../view.php?__id='.$id);
+header('Location: ../resultado.php?__id='.$id);
     exit;
 
 ?>

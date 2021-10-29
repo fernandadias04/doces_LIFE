@@ -18,7 +18,7 @@ $_SESSION[$id] = [
     'doces' => strtoupper($doces)
 ];
 
-header('Location: ../view.php?__id='.$id);
+header('Location: ../resultado.php?__id='.$id);
     exit;
 
 ?>
