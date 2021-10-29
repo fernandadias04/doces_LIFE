@@ -10,11 +10,11 @@
   <body>
     <h1>Calculadora de doces</h1>
 
-    <form>
+    <form action="calculoDoces.php">
       <div class="form-check">
         <h2>Quantos convidados</h2>
         <label for="casamento">Quantos convidados?</label>
-        <input type="number" id="casamento" required />
+        <input type="number" nome="qtdConvidados" id="casamento" required />
       </div>
 
       <div class="form-check1">
@@ -52,13 +52,13 @@
         <label class="form-check-label" for="Radios3">Finger food</label>
       </div>
 
-      <h2>Qual a duração do evento?</h2>
+      <h2>Qual a duracão do evento?</h2>
 
       <div class="form-check2">
         <input
           class="form-check-input"
           type="radio"
-          name="duração"
+          name="duracao"
           id="Radios1"
           value="option1"
           required
@@ -69,7 +69,7 @@
         <input
           class="form-check-input"
           type="radio"
-          name="duração"
+          name="duracao"
           id="Radios2"
           value="option2"
           required
@@ -80,7 +80,7 @@
         <input
           class="form-check-input"
           type="radio"
-          name="duração"
+          name="duracao"
           id="Radios3"
           value="option3"
           required
