@@ -30,7 +30,9 @@ class CalculoDoces
     const DURACAO_ATE3_INFANTIL_BATIZADO = 0;
     const DURACAO_MAIS3_INFANTIL_BATIZADO = 1;
     const DURACAO_MAIS5_INFANTIL_BATIZADO = 2;
-    const SOBREMESA_NAO_INFANTIL_BATIZADO = 0;
+    const SOBREMESA_NAO_INFANTIL_BATIZADO = 2;
+    const SOBREMESA_SIM_INFANTIL_BATIZADO = -1;
+    const BEBIDA_NAO_INFANTIL_BATIZADO = 2;
 
 
 
@@ -174,6 +176,23 @@ class CalculoDoces
         $doces += $this->duracaoEventoCasamentoFesta15($duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
 
         $doces += $this->bebida($bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
+
+        $doces = $doces * $qtdConvidados;
+
+        return $doces;
+    }
+
+    public function caulculoBatizado($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $sabores, $refeicao, $idadeConvidados)
+    {
+        $doces = 0; 
+
+        $doces+= $this->comidaServida($refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0 , 0, static::CAFE_INFANTIL_BATIZADO);
+
+        $doces+= $this->duracaoEventoInfantilBatizado($duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
+
+        $doces+= $this->sobremesa($outrosDoces, static::SOBREMESA_NAO_INFANTIL_BATIZADO, static::SOBREMESA_SIM_INFANTIL_BATIZADO);
+
+        $doces+= $this->bebida($bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
 
         $doces = $doces * $qtdConvidados;
 
