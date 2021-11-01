@@ -29,12 +29,17 @@ unset($_SESSION[$id]);
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
+  <div class="banner">
+        <h1>Calculadora de doces</h1>
+    </div>
     <div id="container">
-      <h1>Calculadora de doces</h1>
-      <h2>Obrigada, pelas respostas.</h2>
+    
+     
       <div class="decisive">
 
-        <h3>Sua festa irá necessitar de: <?php echo $doces; ?> doces.</h3>
+        <h2>Sua festa irá necessitar de: <?php echo $doces; ?> doces.</h2>
+
+        <h3>Obrigada, pelas respostas.</h3>
         </div>
   </body>
 </html>

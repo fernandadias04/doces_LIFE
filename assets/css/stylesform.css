@@ -1,7 +1,9 @@
 body{
     display: flex;
     flex-direction: column;
-    background-color: #AFCAD5;
+   /* background-color: #AFCAD5; */
+   padding: 0;
+   margin: 0;
 }
 
 /*#container {
@@ -16,10 +18,18 @@ body{
 }
 */
 h1 {
-   color:#576166;
+   color:#ffff;
    font-family: "Faustina", Sans-serif;
    text-align: center;
+   font-size:50px;
+  /* border-bottom:1px solid #eee ;*/
 }
+
+.banner {
+
+    background-color: #AFCAD5;
+}
+
 
 form {
     display: flex;

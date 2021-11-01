@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
+  <div class="banner">
+        <h1>Calculadora de doces</h1>
+    </div>
     <div id="container">
-      <h1>Calculadora de doces</h1>
+     
       <h2>Qual seu evento?</h2>
       <div class="decisive">
         
@@ -19,8 +22,8 @@
       </div>
       <div class="true">
         <a href="./Casamento.php">Aniversário 15 anos</a>
-        <a href="./Adulto.php">Aniversario Infantil</a>
-        <a href="./Infantil.php">Aniversário Adulto</a>
+        <a href="./Adulto.php">Aniversário Adulto</a>
+        <a href="./Infantil.php">Aniversario Infantil</a>
       </div>
       </div>
     </div>
