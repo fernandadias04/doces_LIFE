@@ -26,7 +26,7 @@
             <label class="form-check-label" for="Radios1">Almoço</label>
         </div>
         <div class="form-check1">
-            <input class="form-check-input" type="radio" name="comida" id="Radios2" value="option4" required />
+            <input class="form-check-input" type="radio" name="comida" id="Radios2" value="option5" required />
             <label class="form-check-label" for="Radios2">Café</label>
         </div>
 
