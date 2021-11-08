@@ -67,44 +67,22 @@
             <label class="form-check-label" for="Radios2">Não</label>
         </div>
 
-        <h2>Quanto aos sabores</h2>
+        <h2>Os convidados são...</h2>
 
         <div class="form-check5">
-            <input class="form-check-input" type="radio" name="sabores" id="Radios1" value="option1" required />
-            <label class="form-check-label" for="Radios1">
-                Maior parte criancas
-            </label>
+            <input class="form-check-input" type="radio" name="convidados" id="Radios1" value="option1" required />
+            <label class="form-check-label" for="Radios1">Maior parte criancas</label>
 
         </div>
-
-        <div class="imagens">
-            <img src="./assets/img/infantil1.jpeg" />
-            <img src="./assets/img/infantil2.jpeg" />
-        </div>
-
         <div class="form-check5">
-            <input class="form-check-input" type="radio" name="sabores" id="Radios2" value="option2" required />
-            <label class="form-check-label" for="Radios2">
-                Maior parte adultos
-            </label>
+            <input class="form-check-input" type="radio" name="convidados" id="Radios2" value="option2" required />
+            <label class="form-check-label" for="Radios2">Maior parte adultos </label>
 
         </div>
-
-        <div class="imagens">
-            <img src="./assets/img/infantil3.jpeg" />
-            <img src="./assets/img/infantil4.jpeg" />
-        </div>
-
         <div class="form-check5">
-            <input class="form-check-input" type="radio" name="sabores" id="Radios2" value="option2" required />
-            <label class="form-check-label" for="Radios2">
-                Criancas e adultos em quantidade similar
-            </label>
-        </div>
+            <input class="form-check-input" type="radio" name="convidados" id="Radios3" value="option3" required />
+            <label class="form-check-label" for="Radios3">Criancas e adultos em quantidade similar  </label>
 
-        <div class="imagens">
-            <img src="./assets/img/infantil5.jpeg" />
-            <img src="./assets/img/infantil6.jpeg" />
         </div>
 
         <button type="submit">Calcular</button>

@@ -71,7 +71,7 @@
             <label class="form-check-label" for="Radios2">Não</label>
         </div>
 
-        <h2>Quanto aos sabores</h2>
+        <h2>Qual sua preferência de sabores?</h2>
 
         <div class="form-check5">
             <input class="form-check-input" type="radio" name="sabores" id="Radios1" value="option1" required />
@@ -79,19 +79,9 @@
             </label>
         </div>
 
-        <div class="imagens">
-            <img src="./assets/img/docestradicionais1.jpeg" />
-            <img src="./assets/img/docestradicionais2.jpeg" />
-            <img src="./assets/img/docestradicionais3.jpeg" />
-        </div>
         <div class="form-check5">
             <input class="form-check-input" type="radio" name="sabores" id="Radios2" value="option2" required />
             <label class="form-check-label" for="Radios2">Gosto de sabores diferentes</label>
-        </div>
-        <div class="imagens">
-            <img src="./assets/img/docesdiferentes1.jpeg" />
-            <img src="./assets/img/docesdiferentes2.jpeg" />
-            <img src="./assets/img/docesdiferentes3.jpeg" />
         </div>
 
         <div class="form-check5">
@@ -99,68 +89,30 @@
             <label class="form-check-label" for="Radios2">Gosto de ambos </label>
         </div>
 
-        <div class="imagens">
-            <img src="./assets/img/ambos1.jpeg" />
-            <img src="./assets/img/ambos2.jpeg" />
-            <img src="./assets/img/ambos3.jpeg" />
-        </div>
 
-        <h2>Como será a decoração?</h2>
+        <h2>Qual a média de idade dos convidados?</h2>
 
         <div class="form-check6">
-            <input class="form-check-input" type="radio" name="decoração" id="Radios1" value="option1" required />
-            <label class="form-check-label" for="Radios1">Clássica, Peças em prata, flores brancas</label>
-        </div>
-        <div class="imagens">
-            <img src="./assets/img/decoração1.jpeg" />
-        </div>
-        <div class="form-check6">
-            <input class="form-check-input" type="radio" name="decoração" id="Radios2" value="option2" required />
-            <label class="form-check-label" for="Radios2">Clássica com dourado, flores em tons de rosa</label>
-        </div>
-        <div class="imagens">
-            <img src="./assets/img/decoração2.jpeg" />
-
-        </div>
-
-        <div class="form-check6">
-            <input class="form-check-input" type="radio" name="decoração" id="Radios2" value="option2" required />
-            <label class="form-check-label" for="Radios2">Rústico/Boho, Decoração com madeira, flores coloridas
-            </label>
-        </div>
-        <div class="imagens">
-            <img src="./assets/img/decoração3.jpeg" />
-        </div>
-        <div class="form-check6">
-            <input class="form-check-input" type="radio" name="decoração" id="Radios2" value="option2" required />
-            <label class="form-check-label" for="Radios2">Romantico</label>
-        </div>
-        <div class="imagens">
-            <img src="./assets/img/decoração4.jpeg" />
-
-        </div>
-
-        <h2>Como são os convidados?</h2>
-
-        <div class="form-check7">
             <input class="form-check-input" type="radio" name="convidados" id="Radios1" value="option1" required />
             <label class="form-check-label" for="Radios1">Maioria entre 18 e 40 anos</label>
         </div>
 
-        <div class="imagens">
-            <img src="./assets/img/convidado1.jpeg" />
-
-        </div>
-
-        <div class="form-check7">
+        <div class="form-check6">
             <input class="form-check-input" type="radio" name="convidados" id="Radios2" value="option2" required />
             <label class="form-check-label" for="Radios2">Maioria acima de 40 anos</label>
         </div>
 
-        <div class="imagens">
-            <img src="./assets/img/convidado2.jpeg" />
+        <h2>Terá lanche da madrugada?</h2>
 
+        <div class="form-check7">
+            <input class="form-check-input" type="radio" name="lanche" id="Radios1" value="option1" required />
+            <label class="form-check-label" for="Radios1">Sim</label>
         </div>
+        <div class="form-check7">
+            <input class="form-check-input" type="radio" name="lanche" id="Radios2" value="option2" required />
+            <label class="form-check-label" for="Radios2">Não</label>
+        </div>
+
 
         <button type="submit">Calcular</button>
     </form>

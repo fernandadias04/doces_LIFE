@@ -33,6 +33,10 @@
                 <input class="form-check-input" type="radio" name="comida" id="Radios3" value="option3" required />
                 <label class="form-check-label" for="Radios3">Finger food</label>
             </div>
+            <div class="form-check1">
+                <input class="form-check-input" type="radio" name="comida" id="Radios4" value="option4" required />
+                <label class="form-check-label" for="Radios4">Café da tarde</label>
+            </div>
 
             <h2>O evento terá festa depois?</h2>
 
@@ -45,7 +49,12 @@
                 <label class="form-check-label" for="Radios2">Não, somente almoço/jantar e doces + bolo</label>
             </div>
 
-            <h2>Terá mais opões de doces? (exemplo tortas ou sobremesa)</h2>
+            <div class="form-check2">
+                <input class="form-check-input" type="radio" name="duração" id="Radios3" value="option3" required />
+                <label class="form-check-label" for="Radios3">Café da tarde</label>
+            </div>
+
+            <h2>Terá mais opões de doces? (Tortas, sobremesas... )</h2>
 
             <div class="form-check3">
                 <input class="form-check-input" type="radio" name="sobremesa" id="Radios1" value="option1" required />
@@ -66,8 +75,12 @@
                 <input class="form-check-input" type="radio" name="bebida" id="Radios2" value="option2" required />
                 <label class="form-check-label" for="Radios2">Não</label>
             </div>
+            <div class="form-check4">
+                <input class="form-check-input" type="radio" name="bebida" id="Radios3" value="option3" required />
+                <label class="form-check-label" for="Radios3">Será café da tarde </label>
+            </div>
 
-            <h2>Quanto aos sabores</h2>
+            <h2>Qual sua preferência de sabores?</h2>
 
             <div class="form-check5">
                 <input class="form-check-input" type="radio" name="sabores" id="Radios1" value="option1" required />
@@ -75,21 +88,9 @@
                 </label>
             </div>
 
-            <div class="imagens">
-                <img src="./assets/img/docestradicionais1.jpeg" />
-                <img src="./assets/img/docestradicionais2.jpeg" />
-                <img src="./assets/img/docestradicionais3.jpeg" />
-            </div>
-
             <div class="form-check5">
                 <input class="form-check-input" type="radio" name="sabores" id="Radios2" value="option2" required />
                 <label class="form-check-label" for="Radios2">Gosto de sabores diferentes</label>
-            </div>
-
-            <div class="imagens">
-                <img src="./assets/img/docesdiferentes1.jpeg" />
-                <img src="./assets/img/docesdiferentes2.jpeg" />
-                <img src="./assets/img/docesdiferentes3.jpeg" />
             </div>
 
             <div class="form-check5">
@@ -97,13 +98,7 @@
                 <label class="form-check-label" for="Radios2">Gosto de ambos </label>
             </div>
 
-            <div class="imagens">
-                <img src="./assets/img/ambos1.jpeg" />
-                <img src="./assets/img/ambos2.jpeg" />
-                <img src="./assets/img/ambos3.jpeg" />
-            </div>
-
-            <h2>Como são os convidados?</h2>
+            <h2>Qual a média de idade dos convidados?</h2>
 
             <div class="form-check7">
                 <input class="form-check-input" type="radio" name="convidados" id="Radios1" value="option1" required />
