@@ -26,8 +26,8 @@ class CalculoDoces
     const SEM_FESTA_ANIVERSARIO_ADULTO = 0;
     const BEBIDA_ALCOLICA_SIM_ANIVERSARIO_ADULTO = 1;
     const BEBIDA_ALCOLICA_NAO_ANIVERSARIO_ADULTO = 2;
-    const SOBREMESA_NAO_ADULTO = 1;
-    const SOBREMESA_SIM_ADULTO = 0;
+    const SOBREMESA_NAO_ADULTO = 2;
+    const SOBREMESA_SIM_ADULTO = -1;
 
     /** Constantes referentes aos eventos anversario infantil e batizado */
     const ALMOCO_INFANTIL_BATIZADO = 3;
