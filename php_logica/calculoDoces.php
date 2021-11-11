@@ -37,7 +37,8 @@ class CalculoDoces
     const DURACAO_MAIS5_INFANTIL_BATIZADO = 2;
     const SOBREMESA_NAO_INFANTIL_BATIZADO = 1;
     const SOBREMESA_SIM_INFANTIL_BATIZADO = 0;
-    const BEBIDA_NAO_INFANTIL_BATIZADO = 2;
+    const BEBIDA_SIM_INFANTIL_BATIZADO = 1;
+    const BEBIDA_NAO_INFANTIL_BATIZADO = 1;
     const CONVIDADOS_CRIANÇAS = 1;
     const CONVIDADOS_ADULTOS = 0;
     const CONVIDADOS_IGUAIS = 0;
@@ -150,7 +151,9 @@ class CalculoDoces
     {
         if ($sobremesa == 'option1') {
             $doces = $const1;
-        } else {
+        } 
+        
+        if ($sobremesa == 'option2') {
             $doces = $const2;
         }
 
@@ -161,7 +164,9 @@ class CalculoDoces
     {
         if ($bebidas == 'option1') {
             $doces = $const1;
-        } else {
+        } 
+
+        if ($bebidas == 'option2') {
             $doces = $const2;
         }
 
@@ -229,7 +234,7 @@ class CalculoDoces
 
         $doces += $this->duracaoEventoInfantilBatizado($this->duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
 
-        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_NAO_INFANTIL_BATIZADO, static::SOBREMESA_SIM_INFANTIL_BATIZADO);
+        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_INFANTIL_BATIZADO, static::SOBREMESA_NAO_INFANTIL_BATIZADO);
 
         $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
 
