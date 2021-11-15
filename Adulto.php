@@ -34,7 +34,7 @@
                 <label class="form-check-label" for="Radios3">Finger food</label>
             </div>
             <div class="form-check1">
-                <input class="form-check-input" type="radio" name="comida" id="Radios4" value="option4" required />
+                <input class="form-check-input" type="radio" name="comida" id="Radios4" value="option5" required />
                 <label class="form-check-label" for="Radios4">Café da tarde</label>
             </div>
 
