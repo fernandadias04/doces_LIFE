@@ -85,7 +85,7 @@
         </div>
 
         <div class="form-check5">
-            <input class="form-check-input" type="radio" name="sabores" id="Radios2" value="option2" required />
+            <input class="form-check-input" type="radio" name="sabores" id="Radios2" value="option3" required />
             <label class="form-check-label" for="Radios2">Gosto de ambos </label>
         </div>
 

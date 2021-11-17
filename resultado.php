@@ -37,16 +37,75 @@ unset($_SESSION[$id]);
      
       <div class="decisive">
 
-        <h2>Para seu evento estimamos que sejam necessários: <?php echo $doces; ?> doces.</h2>
+        <h2>Para seu evento estimamos que sejam necessários: <?php echo $doces['doces']; ?> doces.</h2>
 
         <h3>Ressaltamos que esse cálculo leva em consideração nossos anos de experiência com eventos e cultura de nossa região. 
           Entretanto fatores como perfil de convidados e costumes podem alterar esse cálculo. 
           Entre em contato conosco, será um prazer adoçar seu evento!</h3>
 
           Sabores sugeridos com base nas suas respostas: 
-          <img src="#" alt="imagem de doces">
-          <img src="#" alt="imagem de doces">
-          <img src="#" alt="imagem de doces">
+
+          <?php 
+            if ($doces['evento'] == 'niveradulto')
+            { 
+              
+              if($doces['preferencia'] == 'option1')
+              {  ?>
+                <img src="/assets/img/docestradicionais1.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docestradicionais2.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docestradicionais3.jpeg" alt="imagem de doces">
+
+              <?php } 
+              
+              if($doces['preferencia'] == 'option2')
+              {  ?>
+
+                <img src="/assets/img/docesdiferentes1.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docesdiferentes2.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docesdiferentes3.jpeg" alt="imagem de doces">
+              
+                <?php } 
+              
+              if($doces['preferencia'] == 'option3')
+              {  ?>
+                <img src="/assets/img/ambos1.jpeg" alt="imagem de doces">
+                <img src="/assets/img/ambos2.jpeg" alt="imagem de doces">
+                <img src="/assets/img/ambos3.jpeg" alt="imagem de doces">
+                
+              <?php } ?>
+          <?php  } ?>
+
+          <?php 
+            if ($doces['evento'] == 'casamento')
+            { 
+              
+              if($doces['preferencia'] == 'option1')
+              {  ?>
+                <img src="/assets/img/docestradicionais1.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docestradicionais2.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docestradicionais3.jpeg" alt="imagem de doces">
+
+              <?php } 
+              
+              if($doces['preferencia'] == 'option2')
+              {  ?>
+                <img src="/assets/img/docesdiferentes1.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docesdiferentes2.jpeg" alt="imagem de doces">
+                <img src="/assets/img/docesdiferentes3.jpeg" alt="imagem de doces">
+              
+                <?php } 
+              
+              if($doces['preferencia'] == 'option3')
+              {  ?>
+               <img src="/assets/img/ambos1.jpeg" alt="imagem de doces">
+                <img src="/assets/img/ambos2.jpeg" alt="imagem de doces">
+                <img src="/assets/img/ambos3.jpeg" alt="imagem de doces">
+                
+              <?php } ?>
+          <?php  } ?>
+
+
+
         </div>
   </body>
 </html>

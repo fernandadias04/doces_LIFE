@@ -50,8 +50,9 @@ class CalculoDoces
     protected $refeicao;
     protected $idadeConvidados;
     protected $festaMadrugada;
+    protected $preferenciaDoces;
 
-    public function __construct($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $refeicao, $idadeConvidados, $festaMadrugada)
+    public function __construct($qtdConvidados, $duracaoEvento, $outrosDoces, $bebidas, $refeicao, $idadeConvidados, $festaMadrugada, $preferenciaDoces)
     {
         $this->qtdConvidados = $qtdConvidados;
         $this->duracaoEvento = $duracaoEvento;
@@ -60,6 +61,7 @@ class CalculoDoces
         $this->refeicao = $refeicao;
         $this->idadeConvidados = $idadeConvidados;
         $this->$festaMadrugada = $festaMadrugada;
+        $this->preferenciaDoces = $preferenciaDoces; 
     }
 
 
@@ -192,36 +194,45 @@ class CalculoDoces
 
     public function calculoCasamentoAni15()
     {
-        $doces = 0;
+        $doces['doces']  = 0;
 
-        $doces += $this->comidaServida($this->refeicao, static::ALMOCO_CASAMENTO15ANOS, static::JANTAR_CASAMENTO15ANOS, static::FINGER_CASAMENTO15ANOS);
+        $doces['doces']  += $this->comidaServida($this->refeicao, static::ALMOCO_CASAMENTO15ANOS, static::JANTAR_CASAMENTO15ANOS, static::FINGER_CASAMENTO15ANOS);
     
-        $doces += $this->duracaoEventoCasamentoFesta15($this->duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
+        $doces['doces']  += $this->duracaoEventoCasamentoFesta15($this->duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
 
-        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_CASAMENTO15ANOS, static::SOBREMESA_NAO_CASAMENTO15ANOS);
+        $doces['doces']  += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_CASAMENTO15ANOS, static::SOBREMESA_NAO_CASAMENTO15ANOS);
 
-        $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
+        $doces['doces']  += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
 
-        $doces += $this->festaMadrugada($this->festaMadrugada, static::FESTA_MADRUGADA_SIM, static::FESTA_MADRUGADA_NAO);
+        $doces['doces']  += $this->festaMadrugada($this->festaMadrugada, static::FESTA_MADRUGADA_SIM, static::FESTA_MADRUGADA_NAO);
         
-        $doces = $doces * $this->qtdConvidados;
+        $doces['doces'] = $doces['doces']  * $this->qtdConvidados;
+
+        $doces['preferencia'] = $this->preferenciaDoces;
+
+        $doces['evento'] = 'casamento';
+
 
         return $doces;
     }
 
     public function calculoNiverAdulto()
     {
-        $doces = 0;
+        $doces['doces'] = 0;
 
-        $doces += $this->comidaServida($this->refeicao, static::ALMOCO_ANIVERSARIO_ADULTO, static::JANTAR_ANIVERSARIO_ADULTO, static::FINGER_ANIVERSARIO_ADULTO);
+        $doces['doces'] += $this->comidaServida($this->refeicao, static::ALMOCO_ANIVERSARIO_ADULTO, static::JANTAR_ANIVERSARIO_ADULTO, static::FINGER_ANIVERSARIO_ADULTO);
 
-        $doces += $this->duracaoEventoCasamentoFesta15($this->duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
+        $doces['doces'] += $this->duracaoEventoCasamentoFesta15($this->duracaoEvento, static::DURACAO_ATE6_CASAMENTO15ANOS, static::DURACAO_MAIS6_CASAMENTO15ANOS, static::DURACAO_MAIS10_CASAMENTO15ANOS);
 
-        $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
+        $doces['doces'] += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_ALCOLICA_NAO_CASAMENTO15ANOS);
 
-        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_ADULTO, static::SOBREMESA_NAO_ADULTO);
+        $doces['doces'] += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_ADULTO, static::SOBREMESA_NAO_ADULTO);
 
-        $doces = $doces * $this->qtdConvidados;
+        $doces['doces'] = $doces['doces'] * $this->qtdConvidados;
+
+        $doces['preferencia'] = $this->preferenciaDoces;
+
+        $doces['evento'] = 'niveradulto';
 
         return $doces;
     }

@@ -2,7 +2,7 @@
 
 require_once('calculoDoces.php');
 
-$dados = new CalculoDoces($_REQUEST['qtdConvidados'], $_REQUEST['duracao'], $_REQUEST['sobremesa'], $_REQUEST['bebida'],  $_REQUEST['comida'], $_REQUEST['convidados'], $_REQUEST['']);
+$dados = new CalculoDoces($_REQUEST['qtdConvidados'], $_REQUEST['duracao'], $_REQUEST['sobremesa'], $_REQUEST['bebida'],  $_REQUEST['comida'], $_REQUEST['convidados'], $_REQUEST[''], $_REQUEST['sabores']);
 
 if (!session_id())
     session_start();
