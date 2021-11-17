@@ -37,9 +37,16 @@ unset($_SESSION[$id]);
      
       <div class="decisive">
 
-        <h2>Sua festa irá necessitar de: <?php echo $doces; ?> doces.</h2>
+        <h2>Para seu evento estimamos que sejam necessários: <?php echo $doces; ?> doces.</h2>
 
-        <h3>Obrigada, pelas respostas.</h3>
+        <h3>Ressaltamos que esse cálculo leva em consideração nossos anos de experiência com eventos e cultura de nossa região. 
+          Entretanto fatores como perfil de convidados e costumes podem alterar esse cálculo. 
+          Entre em contato conosco, será um prazer adoçar seu evento!</h3>
+
+          Sabores sugeridos com base nas suas respostas: 
+          <img src="#" alt="imagem de doces">
+          <img src="#" alt="imagem de doces">
+          <img src="#" alt="imagem de doces">
         </div>
   </body>
 </html>
