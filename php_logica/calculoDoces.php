@@ -210,6 +210,8 @@ class CalculoDoces
 
         $doces['preferencia'] = $this->preferenciaDoces;
 
+        $doces['idade'] = $this->idadeConvidados;
+
         $doces['evento'] = 'casamento';
 
 
@@ -232,6 +234,8 @@ class CalculoDoces
 
         $doces['preferencia'] = $this->preferenciaDoces;
 
+        $doces['idade'] = $this->idadeConvidados;
+
         $doces['evento'] = 'niveradulto';
 
         return $doces;
@@ -239,19 +243,23 @@ class CalculoDoces
 
     public function calculoBatizado()
     {
-        $doces = 0;
+        $doces['doces'] = 0;
 
-        $doces += $this->comidaServida($this->refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0, 0, static::CAFE_INFANTIL_BATIZADO);
+        $doces['doces'] += $this->comidaServida($this->refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0, 0, static::CAFE_INFANTIL_BATIZADO);
 
-        $doces += $this->duracaoEventoInfantilBatizado($this->duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
+        $doces['doces'] += $this->duracaoEventoInfantilBatizado($this->duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
 
-        $doces += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_INFANTIL_BATIZADO, static::SOBREMESA_NAO_INFANTIL_BATIZADO);
+        $doces['doces'] += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_INFANTIL_BATIZADO, static::SOBREMESA_NAO_INFANTIL_BATIZADO);
 
-        $doces += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
+        $doces['doces'] += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
 
-        $doces+=$this->idadeConvidadosInfantil($this->idadeConvidados, static::CONVIDADOS_CRIANÇAS, static::CONVIDADOS_ADULTOS, static::CONVIDADOS_IGUAIS);
+        $doces['doces']+=$this->idadeConvidadosInfantil($this->idadeConvidados, static::CONVIDADOS_CRIANÇAS, static::CONVIDADOS_ADULTOS, static::CONVIDADOS_IGUAIS);
 
-        $doces = $doces * $this->qtdConvidados;
+        $doces['doces'] = $doces['doces'] * $this->qtdConvidados;
+
+        $doces['preferencia'] = $this->preferenciaDoces;
+
+        $doces['evento'] = 'infantil';
 
         return $doces;
     }
