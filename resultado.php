@@ -45,12 +45,8 @@ unset($_SESSION[$id]);
 
           Sabores sugeridos com base nas suas respostas: 
 
-          <?php 
-            if ($doces['evento'] == 'niveradulto' || $doces['evento'] == 'casamento' )
-            { 
-              
-              if($doces['preferencia'] == 'option1')
-              {  ?>
+          <?php if ($doces['evento'] == 'niveradulto' || $doces['evento'] == 'casamento' ): ?>
+            <?php if($doces['preferencia'] == 'option1'): ?>
                 <img src="/assets/img/sabores_tradicionais.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_tradicionais_2.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_tradicionais_3.png" alt="imagem de doces">
@@ -58,11 +54,9 @@ unset($_SESSION[$id]);
                 <img src="/assets/img/sabores_tradicionais_5.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_tradicionais_6.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_tradicionais_7.png" alt="imagem de doces">
-              <?php } 
-              
-              if($doces['preferencia'] == 'option2')
-              {  ?>
-
+            <?php endif; ?> 
+            
+            <?php if($doces['preferencia'] == 'option2'): ?>
                 <img src="/assets/img/sabores_diferentes_2.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_diferentes_3.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_diferentes_4.png" alt="imagem de doces">
@@ -70,12 +64,9 @@ unset($_SESSION[$id]);
                 <img src="/assets/img/sabores_diferentes_6.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_diferentes_7.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_diferentes_8.png" alt="imagem de doces">
-
-                <?php } 
-              
-              if($doces['preferencia'] == 'option3')
-              {  ?>
-                
+            <?php endif;?> 
+                      
+            <?php if($doces['preferencia'] == 'option3'): ?>     
                 <img src="/assets/img/sabores_tradicionais.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_tradicionais_2.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_tradicionais_3.png" alt="imagem de doces">
@@ -83,38 +74,16 @@ unset($_SESSION[$id]);
                 <img src="/assets/img/sabores_diferentes_2.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_diferentes_3.png" alt="imagem de doces">
                 <img src="/assets/img/sabores_diferentes_4.png" alt="imagem de doces">
-                
-              <?php }
-              if($doces['idadade'] == 'option2'){ ?>
-                 <img src="/assets/img/acim_de_40_anos.png" alt="imagem de doces">
+            <?php endif;?>
 
-              <?php } 
+            <?php if($doces['idadade'] == 'option2'): ?>
+                <img src="/assets/img/acim_de_40_anos.png" alt="imagem de doces">
+            <?php endif;?>
 
-                if($doces['idadade'] == 'option1'){ ?>
-                  <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
-
-              <?php
-                }
-              }
-
-              ?>
-         
-  
-
-
-          <?php 
-            if ($doces['evento'] == 'infantil')
-            { ?>
-              
-              <img src="/assets/img/sabores_tradicionais_3.png" alt="imagem de doces">
-              <img src="/assets/img/sabores_diferentes_7.png" alt="imagem de doces">
-              <img src="/assets/img/sabores_tradicionais.png" alt="imagem de doces">
-              <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
-
-              <?php 
-              
-            }
-          ?>
+            <?php if($doces['idadade'] == 'option1'): ?>
+                <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
+            <?php endif;?>
+          <?php endif;?>
 
           
 
