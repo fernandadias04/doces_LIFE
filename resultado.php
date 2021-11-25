@@ -85,6 +85,15 @@ unset($_SESSION[$id]);
             <?php endif;?>
           <?php endif;?>
 
+          <?php if ($doces['evento'] == 'infantil') :?>
+
+              <img src="/assets/img/sabores_tradicionais_3.png" alt="imagem de doces">
+              <img src="/assets/img/sabores_diferentes_7.png" alt="imagem de doces">
+              <img src="/assets/img/sabores_tradicionais.png" alt="imagem de doces">
+              <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
+
+              <?php endif;  ?>
+
           
 
 
