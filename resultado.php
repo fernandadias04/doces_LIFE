@@ -92,6 +92,10 @@ unset($_SESSION[$id]);
               <img src="/assets/img/sabores_tradicionais.png" alt="imagem de doces">
               <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
 
+              <?php if($doces['idadade'] == 'option2'): ?>
+                <img src="/assets/img/acim_de_40_anos.png" alt="imagem de doces">
+              <?php endif;?>
+
               <?php endif;  ?>
 
           
