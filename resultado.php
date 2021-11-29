@@ -76,11 +76,11 @@ unset($_SESSION[$id]);
                 <img src="/assets/img/sabores_diferentes_4.png" alt="imagem de doces">
             <?php endif;?>
 
-            <?php if($doces['idadade'] == 'option2'): ?>
+            <?php if($doces['idade'] == 'option2'): ?>
                 <img src="/assets/img/acim_de_40_anos.png" alt="imagem de doces">
             <?php endif;?>
 
-            <?php if($doces['idadade'] == 'option1'): ?>
+            <?php if($doces['idade'] == 'option1'): ?>
                 <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
             <?php endif;?>
           <?php endif;?>
@@ -92,7 +92,7 @@ unset($_SESSION[$id]);
               <img src="/assets/img/sabores_tradicionais.png" alt="imagem de doces">
               <img src="/assets/img/abaixo_de_40_anos.png" alt="imagem de doces">
 
-              <?php if($doces['idadade'] == 'option2'): ?>
+              <?php if($doces['idade'] == 'option2'): ?>
                 <img src="/assets/img/acim_de_40_anos.png" alt="imagem de doces">
               <?php endif;?>
 
