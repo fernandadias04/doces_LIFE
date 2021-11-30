@@ -43,7 +43,13 @@ h2 {
    font-size: 40px;
    width: 70%;
 }
-
+h2 span {
+    color:#AFCAD5;
+}
+h3 span {
+    color:#AFCAD5;
+    text-align: center;
+}
 #container h2 {
 text-align: center;
 }
@@ -86,9 +92,19 @@ a:hover {
 }
 
 .decisive img {
-    width:50px;
+    width:180px;
 }
 
+.lateral {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    margin: auto;
+    justify-content: center;
+    grid-template-rows: 188px 174px 254px;
+    display: grid;
+    grid-template-columns: repeat(3, 195px);
+}
 
 @media (max-width: 618px) {
     .true {
@@ -117,5 +133,28 @@ a:hover {
     }
     h1 {
         font-size:50px;
+    }
+    .lateral {
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        margin: auto;
+        justify-content: center;
+        grid-template-rows: 188px 174px 254px;
+        display: grid;
+        grid-template-columns: repeat(2, 195px);
+    }
+}
+@media (max-width: 398px) { 
+    
+    .lateral {
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        margin: auto;
+        justify-content: center;
+        grid-template-rows: 188px 174px 254px;
+        display: grid;
+        grid-template-columns: repeat(1, 195px);
     }
 }
