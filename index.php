@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Calculadora Lara</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
   </head>
   <body>
   <div class="banner">

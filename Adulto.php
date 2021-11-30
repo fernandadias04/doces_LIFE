@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aniversário adulto</title>
-    <link rel="stylesheet" href="./assets/css/stylesform.css" />
+    <link rel="stylesheet" href="./assets/css/styleform.css" />
+     <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
 </head>
 
 <body>
@@ -45,12 +46,12 @@
                 <label class="form-check-label" for="Radios1">Sim, com música e duração de mais de 5 horas </label>
             </div>
             <div class="form-check2">
-                <input class="form-check-input" type="radio" name="duração" id="Radios2" value="option2" required />
+                <input class="form-check-input" type="radio" name="duracao" id="Radios2" value="option2" required />
                 <label class="form-check-label" for="Radios2">Não, somente almoço/jantar e doces + bolo</label>
             </div>
 
             <div class="form-check2">
-                <input class="form-check-input" type="radio" name="duração" id="Radios3" value="option3" required />
+                <input class="form-check-input" type="radio" name="duracao" id="Radios3" value="option3" required />
                 <label class="form-check-label" for="Radios3">Café da tarde</label>
             </div>
 
