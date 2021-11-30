@@ -27,6 +27,7 @@ unset($_SESSION[$id]);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Calculadora Lara</title>
     <link rel="stylesheet" href="./assets/css/resultado.css" />
+     <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
   </head>
   <body>
   <div class="banner">

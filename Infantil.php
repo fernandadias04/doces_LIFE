@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aniversário infantil</title>
     <link rel="stylesheet" href="./assets/css/styleform.css" />
+     <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
 </head>
 
 <body>
