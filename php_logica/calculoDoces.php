@@ -26,7 +26,7 @@ class CalculoDoces
     const SEM_FESTA_ANIVERSARIO_ADULTO = 0;
     const BEBIDA_ALCOLICA_SIM_ANIVERSARIO_ADULTO = 1;
     const BEBIDA_ALCOLICA_NAO_ANIVERSARIO_ADULTO = 2;
-    const SOBREMESA_NAO_ADULTO = 2;
+    const SOBREMESA_NAO_ADULTO = 1 ;
     const SOBREMESA_SIM_ADULTO = -1;
 
     /** Constantes referentes aos eventos anversario infantil e batizado */
@@ -37,7 +37,7 @@ class CalculoDoces
     const DURACAO_MAIS5_INFANTIL_BATIZADO = 2;
     const SOBREMESA_NAO_INFANTIL_BATIZADO = 1;
     const SOBREMESA_SIM_INFANTIL_BATIZADO = 0;
-    const BEBIDA_SIM_INFANTIL_BATIZADO = 1;
+    const BEBIDA_SIM_INFANTIL_BATIZADO = 0;
     const BEBIDA_NAO_INFANTIL_BATIZADO = 1;
     const CONVIDADOS_CRIANÇAS = 1;
     const CONVIDADOS_ADULTOS = 0;
@@ -245,13 +245,13 @@ class CalculoDoces
     {
         $doces['doces'] = 0;
 
-        $doces['doces'] += $this->comidaServida($this->refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0, 0, static::CAFE_INFANTIL_BATIZADO);
+        $doces['doces'] += $this->comidaServida($this->refeicao, static::ALMOCO_INFANTIL_BATIZADO, 0, 0, 0, static::CAFE_INFANTIL_BATIZADO);
 
         $doces['doces'] += $this->duracaoEventoInfantilBatizado($this->duracaoEvento, static::DURACAO_ATE3_INFANTIL_BATIZADO, static::DURACAO_MAIS3_INFANTIL_BATIZADO, static::DURACAO_MAIS5_INFANTIL_BATIZADO);
 
         $doces['doces'] += $this->sobremesa($this->outrosDoces, static::SOBREMESA_SIM_INFANTIL_BATIZADO, static::SOBREMESA_NAO_INFANTIL_BATIZADO);
 
-        $doces['doces'] += $this->bebida($this->bebidas, static::BEBIDA_ALCOLICA_SIM_CASAMENTO15ANOS, static::BEBIDA_NAO_INFANTIL_BATIZADO);
+        $doces['doces'] += $this->bebida($this->bebidas, static::BEBIDA_SIM_INFANTIL_BATIZADO, static::BEBIDA_NAO_INFANTIL_BATIZADO);
 
         $doces['doces']+=$this->idadeConvidadosInfantil($this->idadeConvidados, static::CONVIDADOS_CRIANÇAS, static::CONVIDADOS_ADULTOS, static::CONVIDADOS_IGUAIS);
 
