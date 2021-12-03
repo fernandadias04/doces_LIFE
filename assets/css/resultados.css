@@ -103,10 +103,10 @@ a:hover {
     justify-content: center;
     grid-template-rows: 188px 174px 254px;
     display: grid;
-    grid-template-columns: repeat(3, 195px);
+    grid-template-columns: repeat(4, 195px);
 }
 
-@media (max-width: 618px) {
+@media (max-width: 888px) {
     .true {
         display: flex;
         flex-direction: column;

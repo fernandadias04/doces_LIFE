@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aniversário adulto</title>
-    <link rel="stylesheet" href="./assets/css/styleform.css" />
+    <link rel="stylesheet" href="./assets/css/stylesforms.css" />
      <link rel="shortcut icon" type="image/png" href="./assets/img/logo.png">
 </head>
 
 <body>
     <div class="banner">
+      <div class="separador"></div>
         <h1>Calculadora de doces</h1>
-        </div>
+    </div>
         <form action="php_logica/retorno_festa_adulto.php">
             <h2>Quantos convidados</h2>
             <div class="form-check">
