@@ -77,6 +77,26 @@ a:hover {
     border: 2px solid #fff;
     color:#fff;
 }
+
+.envio {
+  color: #576166;
+    font-family: "Faustina", Sans-serif;
+    text-decoration: none;
+    background: #fff;
+    width: 80px;
+    border: 2px solid #576166;
+    border-radius: 50px;
+    padding: 9px;
+    text-align: center;
+    margin-top: -200px;
+}
+
+.envio:hover {
+    background: #576166;
+    border: 2px solid #fff;
+    color:#fff;
+}
+
 .decisive {
     display: flex;
     flex-direction: column;
@@ -143,7 +163,11 @@ a:hover {
         grid-template-rows: 188px 174px 254px;
         display: grid;
         grid-template-columns: repeat(2, 195px);
+        cursor: pointer;
     }
+    .envio {
+    margin-top: 0px;
+}
 }
 @media (max-width: 398px) { 
     
