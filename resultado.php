@@ -119,7 +119,7 @@ unset($_SESSION[$id]);
               ?>
 
             </div>
-                <a class="envio" href="https://ceudocesfinos.com/faca-seu-pedido/">Enviar pedido</a>
+                <a class="envio" href="https://ceudocesfinos.com/faca-seu-pedido/">Solicitar orçamento</a>
 
           </div>
         </body>

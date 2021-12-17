@@ -36,11 +36,11 @@
             <label class="form-check-label" for="Radios3">Finger food</label>
         </div>
 
-        <h2>Qual a duracão do evento?</h2>
+        <h2>Qual a duração total do evento? (Recepção dos convidados até o final da festa</h2>
 
         <div class="form-check2">
             <input class="form-check-input" type="radio" name="duracao" id="Radios1" value="option1" required />
-            <label class="form-check-label" for="Radios1">4-6 horas</label>
+            <label class="form-check-label" for="Radios1">Em média 4 horas (sem festa depois) </label>
         </div>
         <div class="form-check2">
             <input class="form-check-input" type="radio" name="duracao" id="Radios2" value="option2" required />
